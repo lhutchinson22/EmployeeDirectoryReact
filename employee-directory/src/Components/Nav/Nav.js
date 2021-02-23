@@ -24,18 +24,18 @@ function Nav() {
               Home
             </Link>
           </li>
-          {/* <li className="nav-item">
+          <li className="nav-item">
             <Link
-              to="/signup"
+              to="/search"
               className={
-                window.location.pathname === "/signup"
+                window.location.pathname === "/search"
                   ? "nav-link active"
                   : "nav-link"
               }
             >
-              Sign Up
+              Search
             </Link>
-          </li> */}
+          </li>
         </ul>
       </div>
     </nav>
