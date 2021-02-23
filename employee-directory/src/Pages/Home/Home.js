@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import RandomEmployee from "../../Components/Users/RandomEmployee";
 import User from "../../Components/Users/User";
 import API from "./../../utils/API/API";
 
@@ -22,7 +23,7 @@ export default class Home extends Component {
     return (
       <div>
         <h1>Show</h1>
-        {/* <User /> */}
+        <RandomEmployee />
       </div>
     );
   }
