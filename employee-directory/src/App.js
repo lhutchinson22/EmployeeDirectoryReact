@@ -6,7 +6,6 @@ import Nav from "./Components/Nav/Nav";
 import Wrapper from "./Components/Wrapper/Wrapper";
 import Search from "./Pages/Search/Search";
 import Home from "./Pages/Home/Home";
-import RandomEmployee from "./Components/Users/RandomEmployee";
 
 function App() {
   return (

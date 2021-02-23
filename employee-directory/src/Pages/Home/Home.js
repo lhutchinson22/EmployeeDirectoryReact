@@ -1,11 +1,12 @@
 import React, { Component } from "react";
-import RandomEmployee from "../../Components/Users/RandomEmployee";
+import AllUser from "../../Components/Users/AllUser";
 import API from "./../../utils/API/API";
 
 export default class Home extends Component {
   state = {
-    result: {},
+    result: [],
     search: "",
+    loading: true,
   };
 
   componentDidMount() {
@@ -14,22 +15,22 @@ export default class Home extends Component {
 
   searchEmployees = (query) => {
     API.search(query)
-      .then((res) => this.setState({ result: res.data }))
+      .then((res) => this.setState({ result: res.data, loading: false }))
       .catch((err) => console.log(err));
   };
 
   render() {
-    console.log(this.state.result.results);
-    // console.log(Object.keys(test));
+    if (this.state.loading) {
+      return <div>Still loading...</div>;
+    } else {
+      console.log(this.state.result.results);
 
-    return (
-      <div>
-        <h1>Show Employees</h1>
-        {/* {this.state.data.map((items, index) => (
-          <RandomEmployee {...items} key={index}></RandomEmployee>
-        ))} */}
-        <RandomEmployee />
-      </div>
-    );
+      return (
+        <div>
+          <h1>Show Employees</h1>
+          <AllUser users={this.state.result.results} />
+        </div>
+      );
+    }
   }
 }
