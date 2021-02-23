@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 import Footer from "./Components/Footer/Footer";
 import Nav from "./Components/Nav/Nav";
-import User from "./Components/Users/User";
 import Wrapper from "./Components/Wrapper/Wrapper";
 import Search from "./Pages/Search/Search";
 import Home from "./Pages/Home/Home";
+import RandomEmployee from "./Components/Users/RandomEmployee";
 
 function App() {
   return (
@@ -19,10 +19,9 @@ function App() {
             <Route exact path="/home" component={Home} />
             <Route exact path="/search" component={Search} />
           </Wrapper>
-          <Footer />
         </div>
       </Router>
-      {/* <User /> */}
+      <Footer />
     </div>
   );
 }

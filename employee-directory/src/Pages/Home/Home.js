@@ -19,14 +19,16 @@ export default class Home extends Component {
   };
 
   render() {
-    // console.log(this.state.result.results);
-
+    console.log(this.state.result.results);
     // console.log(Object.keys(test));
 
     return (
       <div>
         <h1>Show Employees</h1>
-        <RandomEmployee src={this.state.result.results} />
+        {/* {this.state.data.map((items, index) => (
+          <RandomEmployee {...items} key={index}></RandomEmployee>
+        ))} */}
+        <RandomEmployee />
       </div>
     );
   }
