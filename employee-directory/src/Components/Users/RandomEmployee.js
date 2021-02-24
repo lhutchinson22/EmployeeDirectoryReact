@@ -1,24 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 function RandomEmployee(props) {
-  // const employees = Object.keys(props.user);
-  // const [sortedField, setSortedField] = useState(null);
-  // const [sortAscending, setSortAscending] = useState();
-  // const requestSort = () => {};
-
-  // let sortedEmployees = [...employees];
-  // if (sortedField !== null) {
-  //   sortedEmployees.sort((a, b) => {
-  //     if (a[sortedField] < b[sortedField]) {
-  //       return -1;
-  //     }
-  //     if (a[sortedField] > b[sortedField]) {
-  //       return 1;
-  //     }
-  //     return 0;
-  //   });
-  // }
-
   return (
     <table
       className="table"

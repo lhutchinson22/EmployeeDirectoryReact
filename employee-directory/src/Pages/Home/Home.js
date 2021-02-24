@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import AllUser from "../../Components/Users/AllUser";
-import Search from "../Search/Search";
 import API from "./../../utils/API/API";
 
 export default class Home extends Component {
@@ -27,6 +26,7 @@ export default class Home extends Component {
 
   handleClick = (e) => {
     this.setState({ filterCriteria: e.target.getAttribute("data-value") });
+    this.setState({ currentSort: e.target.getAttribute("data-value") });
   };
 
   render() {
@@ -65,12 +65,14 @@ export default class Home extends Component {
       return (
         <div className="show-employees">
           <h1 className="show-employees-header">Show Employees</h1>
+
           <input
             onChange={(e) => this.setState({ query: e.target.value })}
             type="text"
             name="nameSearch"
           />
           <input type="submit" value="Search" />
+          {/* sort by name */}
           <button
             data-value="first-name"
             onClick={this.handleClick}
@@ -79,7 +81,7 @@ export default class Home extends Component {
           >
             sort by name
           </button>
-
+          {/* filter by gender */}
           <button
             data-value="female"
             onClick={this.handleClick}
@@ -88,6 +90,7 @@ export default class Home extends Component {
           >
             filter by gender
           </button>
+          {/* reset filter */}
           <button
             data-value="all"
             onClick={this.handleClick}
