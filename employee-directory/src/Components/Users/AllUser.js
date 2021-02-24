@@ -5,7 +5,7 @@ const AllUser = (props) => {
   return (
     <div>
       {props.users.map((user, index) => (
-        <RandomEmployee key={index} user={user} />
+        <RandomEmployee user={user} key={index} index={index + 1} />
       ))}
     </div>
   );

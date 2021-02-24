@@ -1,9 +1,12 @@
 import React, { Component } from "react";
-import style from "../../App.css";
+// import style from "../../App.css";
 import axios from "axios";
+import RandomEmployee from "../../Components/Users/RandomEmployee";
+import AllUser from "../../Components/Users/AllUser";
+import API from "./../../utils/API/API";
 
 export default class Search extends Component {
-  state = { data: [], imgSearch: "" };
+  state = { data: [], nationalitySearch: "" };
 
   onChange = function (e) {
     this.setState({ [e.target.name]: e.target.value });
@@ -11,10 +14,9 @@ export default class Search extends Component {
 
   getRequest = async function (e) {
     e.preventDefault();
-    const BASEURL = "";
+    const BASEURL = "https://randomuser.me/api/?nat=";
+    const fullUrl = BASEURL + this.state.nationalitySearch;
 
-    // const APIKEY = "&api_key=dc6zaTOxFJmzC&limit=20";
-    const fullUrl = BASEURL + this.state.imgSearch + "/images";
     try {
       const response = await axios.get(fullUrl);
       console.log(response);
@@ -27,14 +29,16 @@ export default class Search extends Component {
 
   render() {
     return (
-      <div style={style}>
-        <h1>Search employee:</h1>
+      <div className="show-employees">
+        <h1 className="show-employees-header">
+          Search employee by nationality:
+        </h1>
         <form>
-          <p>employee name:</p>
+          <p>employee nationality:</p>
           <input
             onChange={(e) => this.onChange(e)}
             type="text"
-            name="imgSearch"
+            name="nationalitySearch"
           />
           <input
             onClick={(e) => this.getRequest(e)}
@@ -42,12 +46,15 @@ export default class Search extends Component {
             value="Search"
           />
         </form>
-
-        {/* {this.state.data.map((image, index) => (
-          // <User key={index}>
-          //   <img src={image} />
-          // </User>
-        ))} */}
+        <div className="show-employees">
+          <div className="search-div">
+            {this.state.data.map((item, index) => (
+              <AllUser key={index}>
+                <p>{item}</p>
+              </AllUser>
+            ))}
+          </div>
+        </div>
       </div>
     );
   }

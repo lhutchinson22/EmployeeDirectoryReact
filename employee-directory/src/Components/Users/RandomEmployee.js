@@ -1,7 +1,6 @@
 import React from "react";
 
-function RandomEmployee(props, index) {
-  console.log(props + ".. hi this is props passed");
+function RandomEmployee(props) {
   return (
     <table
       className="table"
@@ -15,16 +14,16 @@ function RandomEmployee(props, index) {
           <th scope="col">First</th>
           <th scope="col">Last</th>
           <th scope="col">Email</th>
+          <th scope="col">Cell</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th key={index} scope="row">
-            1
-          </th>
-          <td key={index}>{props.user.name.first}</td>
-          <td key={index}>{props.user.name.last}</td>
-          <td key={index}>{props.user.email}</td>
+          <th scope="row">{props.index}</th>
+          <td>{props.user.name.first}</td>
+          <td>{props.user.name.last}</td>
+          <td>{props.user.email}</td>
+          <td>{props.user.cell}</td>
         </tr>
       </tbody>
     </table>

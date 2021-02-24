@@ -31,6 +31,7 @@ img {
 
 table {
   margin: 10px 20px 20px 20px;
+  text-align: center;
 }
 
 .show-employees {
@@ -40,4 +41,13 @@ table {
 
 .show-employees-header {
   margin-bottom: 50px;
+}
+
+.btn {
+  float: right;
+  margin: 0px 20px 20px 0px;
+}
+
+.search-div {
+  height: 300px;
 }
