@@ -7,7 +7,7 @@
 
 <h2>Images</h2>
 
-<img src="./reactAPP.gif>
+<img src="employee-directory/reactAPP.gif>
 
 <h2>Questions</h2>
 <p>Github username: lhutchinson22</p>
