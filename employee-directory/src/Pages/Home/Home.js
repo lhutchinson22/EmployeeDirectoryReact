@@ -10,6 +10,7 @@ export default class Home extends Component {
     loading: true,
     filterCriteria: "all",
     query: "",
+    currentSort: "default",
   };
 
   componentDidMount() {
@@ -48,6 +49,19 @@ export default class Home extends Component {
                 employee.name.last.toLowerCase()
             );
 
+      // const nameSort =
+      //   this.state.currentSort === "default"
+      //     ? nameSort
+      //     : nameSort.sort((a, b) => {
+      //         if (a[nameSort] < b[nameSort]) {
+      //           return -1;
+      //         }
+      //         if (a[nameSort] > b[nameSort]) {
+      //           return 1;
+      //         }
+      //         return 0;
+      //       });
+
       return (
         <div className="show-employees">
           <h1 className="show-employees-header">Show Employees</h1>
@@ -56,11 +70,15 @@ export default class Home extends Component {
             type="text"
             name="nameSearch"
           />
-          <input
-            // onClick={(e) => this.getRequest(e)}
-            type="submit"
-            value="Search"
-          />
+          <input type="submit" value="Search" />
+          <button
+            data-value="first-name"
+            onClick={this.handleClick}
+            type="button"
+            className="btn btn-primary"
+          >
+            sort by name
+          </button>
 
           <button
             data-value="female"
