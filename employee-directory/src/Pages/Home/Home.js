@@ -23,11 +23,9 @@ export default class Home extends Component {
     if (this.state.loading) {
       return <div>Still loading...</div>;
     } else {
-      console.log(this.state.result.results);
-
       return (
-        <div>
-          <h1>Show Employees</h1>
+        <div className="show-employees">
+          <h1 className="show-employees-header">Show Employees</h1>
           <AllUser users={this.state.result.results} />
         </div>
       );

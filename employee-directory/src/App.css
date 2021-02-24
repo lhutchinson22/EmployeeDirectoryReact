@@ -28,3 +28,16 @@ img {
 .img-fluid {
   width: 300px;
 }
+
+table {
+  margin: 10px 20px 20px 20px;
+}
+
+.show-employees {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.show-employees-header {
+  margin-bottom: 50px;
+}
