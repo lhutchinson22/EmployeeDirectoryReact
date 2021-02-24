@@ -1,0 +1,53 @@
+.nav-item {
+  margin: 10px;
+}
+
+.jumbotron {
+  background-image: ("./Components/Jumbotron/puppybanner.jpg");
+}
+
+form {
+  text-align: center;
+}
+
+div h1 {
+  text-align: center;
+}
+
+img {
+  width: 150px;
+  height: 150;
+}
+
+.card {
+  width: 300px;
+  float: left;
+  margin: 10px;
+}
+
+.img-fluid {
+  width: 300px;
+}
+
+table {
+  margin: 10px 20px 20px 20px;
+  text-align: center;
+}
+
+.show-employees {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.show-employees-header {
+  margin-bottom: 50px;
+}
+
+.btn {
+  float: right;
+  margin: 0px 20px 20px 0px;
+}
+
+.search-div {
+  height: 300px;
+}
