@@ -24,7 +24,7 @@ function Nav() {
               Home
             </Link>
           </li>
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <Link
               to="/search"
               className={
@@ -35,7 +35,7 @@ function Nav() {
             >
               Search
             </Link>
-          </li>
+          </li> */}
         </ul>
       </div>
     </nav>
