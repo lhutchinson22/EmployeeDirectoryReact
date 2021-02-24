@@ -48,9 +48,7 @@ export default class Search extends Component {
         <div className="show-employees">
           <div className="search-div">
             {this.state.data.map((item, index) => (
-              <AllUser key={index}>
-                <p>{item}</p>
-              </AllUser>
+              <AllUser item={item} key={index} />
             ))}
           </div>
         </div>
