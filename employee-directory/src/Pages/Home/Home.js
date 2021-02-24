@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import AllUser from "../../Components/Users/AllUser";
+import Search from "../Search/Search";
 import API from "./../../utils/API/API";
 
 export default class Home extends Component {
@@ -23,7 +24,6 @@ export default class Home extends Component {
   };
 
   handleClick = () => {
-    console.log("Click happened");
     this.setState({ filterCriteria: "female" });
   };
 
@@ -43,9 +43,9 @@ export default class Home extends Component {
           <button
             onClick={this.handleClick}
             type="button"
-            class="btn btn-danger"
+            className="btn btn-danger"
           >
-            Filter Gender Women
+            filter by gender
           </button>
           <AllUser users={results} />
         </div>

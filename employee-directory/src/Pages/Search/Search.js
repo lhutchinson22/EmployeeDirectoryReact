@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import axios from "axios";
 import RandomEmployee from "../../Components/Users/RandomEmployee";
 import AllUser from "../../Components/Users/AllUser";
-import API from "./../../utils/API/API";
 
 export default class Search extends Component {
   state = { data: [], nationalitySearch: "" };
