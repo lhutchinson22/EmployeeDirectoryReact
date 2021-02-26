@@ -26,7 +26,23 @@ export default class Home extends Component {
 
   handleClick = (e) => {
     this.setState({ filterCriteria: e.target.getAttribute("data-value") });
+  };
+
+  handleSortClick = (e) => {
+    let nameSort = this.state.result;
+
+    if (e.target.getAttribute("data-value") === "first-name") {
+      nameSort = this.state.result.sort((a, b) => {
+        if (a.name.first < b.name.first) {
+          return -1;
+        } else if (a.name.first > b.name.first) {
+          return 1;
+        }
+        return 0;
+      });
+    }
     this.setState({ currentSort: e.target.getAttribute("data-value") });
+    this.setState({ result: nameSort });
   };
 
   render() {
@@ -49,19 +65,6 @@ export default class Home extends Component {
                 employee.name.last.toLowerCase()
             );
 
-      // const nameSort =
-      //   this.state.currentSort === "default"
-      //     ? nameSort
-      //     : nameSort.sort((a, b) => {
-      //         if (a[nameSort] < b[nameSort]) {
-      //           return -1;
-      //         }
-      //         if (a[nameSort] > b[nameSort]) {
-      //           return 1;
-      //         }
-      //         return 0;
-      //       });
-
       return (
         <div className="show-employees">
           <h1 className="show-employees-header">Show Employees</h1>
@@ -75,7 +78,7 @@ export default class Home extends Component {
           {/* sort by name */}
           <button
             data-value="first-name"
-            onClick={this.handleClick}
+            onClick={this.handleSortClick}
             type="button"
             className="btn btn-primary"
           >
