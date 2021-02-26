@@ -6,6 +6,10 @@
   background-image: ("./Components/Jumbotron/puppybanner.jpg");
 }
 
+footer {
+  text-align: center;
+}
+
 form {
   text-align: center;
 }
@@ -50,4 +54,8 @@ table {
 
 .search-div {
   height: 300px;
+}
+
+.input-bar {
+  margin-left: 20px;
 }

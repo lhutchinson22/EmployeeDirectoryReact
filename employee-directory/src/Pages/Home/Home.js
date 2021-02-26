@@ -73,6 +73,7 @@ export default class Home extends Component {
             onChange={(e) => this.setState({ query: e.target.value })}
             type="text"
             name="nameSearch"
+            className="input-bar"
           />
           <input type="submit" value="Search" />
           {/* sort by name */}
