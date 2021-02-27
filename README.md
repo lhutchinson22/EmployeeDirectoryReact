@@ -9,6 +9,8 @@
 
 <img src="./public/reactAPP.gif">
 
+<p>deployed link: "https://lauren-employee-directory.herokuapp.com/"</p>
+
 <h2>Questions</h2>
 <p>Github username: lhutchinson22</p>
 <p>For a look at my repositories click this link: https://github.com/lhutchinson22</p>
